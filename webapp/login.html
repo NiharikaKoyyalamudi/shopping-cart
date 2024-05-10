@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-image:url("https://media.wired.com/photos/5c9040ee4950d24718d6da99/16:9/w_2400,h_1350,c_limit/shoppingcart-1066110386.jpg")
+        }
+
+        .header {
+            height: 80px;
+            width: 100%;
+            background-color: #343a40;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .header .logo {
+            height:70px;
+            width :70px;
+            border-radius:50px;
+        }
+
+        .cart {
+            display: flex;
+            background-color: #fff;
+            justify-content: space-between;
+            align-items: center;
+            padding: 7px 10px;
+            border-radius: 3px;
+            width: 80px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            outline: none;
+        }
+
+        button {
+            background-color: #45a049;;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #4CAF50;
+        }
+
+        .error {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        form {
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            margin-top: 30px; /* Adjust top margin as needed */
+            border: 1px solid #ccc;
+            height:300px;
+            width: 700px; /* Add border here */
+        }
+        .form2 {
+        height:30px;
+        }
+        .form2 button{
+        height:40px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .header {
+                padding: 10px;
+            }
+
+            .header .logo {
+                font-size: 24px;
+            }
+
+            .cart {
+                width: 60px;
+            }
+
+            input[type="text"],
+            input[type="password"],
+            button {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-sizing: border-box;
+                font-size: 16px;
+                outline: none;
+            }
+
+            button {
+                background-color: #4CAF50;
+                color: #fff;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+            button:hover {
+                background-color: #4CAF50;;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="shoplogo.jpg" class="logo">
+         <center><h1>Online Shopping</h1></center>
+        <div class="cart"><img src="cartimg.png" width="30px" height="30px"/><p id="count">0</p></div>
+    </div>
+    <form id="loginForm" method="post" action="loginServlet">
+        <!-- Change method to post -->
+        <center><h2>Login</h2></center>
+        <div>
+            <input type="text" id="username" name="n" placeholder="Username" required>
+        </div><br>
+        <div>
+            <input type="password" id="password" name="p" placeholder="Password" required>
+        </div><br><br>
+        <button type="submit">Login</button>
+    </form>
+    <form class="form2" action="registration.jsp">
+        <button type="submit">Sign Up/Register</button>
+    </form>
+    <div id="error" class="error"></div>
+</body>
+</html>
